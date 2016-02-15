@@ -3,13 +3,13 @@
 
 import numpy as np
 from . import data_location, info
+from . import nusers, nitems
 
 class Matrix:
     """
     """
     def __init__(self):
-        l = open(data_location + info).readlines()
-        self.rating_matrix = np.zeros([int(val.split()[0]) + 1 for val in l][:-1])
+        self.rating_matrix = np.zeros([nusers + 1, nitems + 1])
 
     def create_rating_matrix(self, users):
         """
