@@ -9,7 +9,7 @@ class Matrix:
     """
     """
     def __init__(self):
-        self.rating_matrix = np.zeros([nusers + 1, nitems + 1])
+        self.rating_matrix = np.full(([nusers + 1, nitems + 1]), fill_value = np.nan)
 
     def create_rating_matrix(self, users):
         """
