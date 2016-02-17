@@ -81,7 +81,6 @@ class Data:
         >>> r[244, 51]
         2.0
         """
-        d = self.load_data()
         m = Matrix()
         m.create_rating_matrix(self._users)
         return m.rating_matrix
