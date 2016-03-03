@@ -5,6 +5,9 @@
    :synopsis: class for creating a single movie item
 """
 
+# library imports
+from collections import OrderedDict
+
 from . import genre_names
 
 class Item:
@@ -43,7 +46,7 @@ class Item:
         self._movie_release_date = item_data[2]
         self._video_release_date = item_data[3]
         self._IMDb_URL           = item_data[4]
-        self._genres             = dict(map(lambda x, y: (x, int(y)), genre_names, item_data[5:]))
+        self._genres             = OrderedDict(map(lambda x, y: (x, int(y)), genre_names, item_data[5:]))
 
     def get_movie_id(self):
         """
@@ -85,7 +88,7 @@ class Item:
         The value of the dict is 1 or 0 depending on if the genre is associated with the movie or not
         
         :return: all the genres information of the movie
-        :rtype:  dict
+        :rtype:  OrderedDict
         """
         return self._genres
 
