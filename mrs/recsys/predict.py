@@ -24,47 +24,6 @@ class Predict:
         self.rating_matrix      = self.data.get_rating_matrix()
         self.correlation_matrix = cf.Correlation().pearson(self.rating_matrix)
 
-    def create_ndarray_for_features(self, user_id, _list, neighbors):
-        """
-        Rough algorithm::
-
-            for every item_id in _list:
-                initialize feature variable to empty list
-                for neighbor_user in neighbors:
-                    if neighbor_user has not rated item_id:
-                        continue
-                    if we got 40 ratings:
-                        we are done. get out from the inner loop
-                    add neighbor_user's rating to feature
-                    initialize avg variable to average of values in feature variable
-                    add avg to feature variable until we got 40 ratings
-                    add the genre features to feature variable
-        
-        :param _list: contains item ids
-        :type _list:  list
-        """
-        l = [0, 0, 0, 0, 0]
-        all_feature = []
-        y = []
-        for item_id in _list:
-            feature = []
-            r = int(self.rating_matrix[user_id, item_id])
-            y.append(l[:r - 1] + [1] + l[r:])
-            #for neighbor_user, rating in neighbors:
-                #if np.isnan(self.rating_matrix[neighbor_user, item_id]):
-                    #continue
-                #if len(feature) == 40:
-                    #break
-                #feature.append(self.rating_matrix[neighbor_user, item_id])
-
-            #avg = sum(feature) / len(feature)
-            #feature.extend([avg] * (40 - len(feature)))
-            feature.extend(list(self.data.get_item_by_id(item_id).get_genres().values()))
-
-            all_feature.append(feature)
-
-        return np.array(all_feature), np.array([y])
-
     def sort_neighbors(self, user_id):
         """
         sort the neighbors in descending according to the correlation between users
@@ -77,54 +36,6 @@ class Predict:
         l = sorted(list(filter(lambda v: -1. <= v[1] <= 1., zip(range(nusers + 1), self.correlation_matrix[user_id]))), key = lambda v: -v[1])
         return l
 
-    def train_and_test_for_an_user(self, user_id):
-        """
-        This method roughly does the following:
-
-        1. sort neighbors according to the similarity
-        2. find how many movies user_name_of(user_id) has rated
-        3. divide the number of ratings to 80% (for training) and 20% (for test)
-        4. create ndarray both form 80% and 20% of the information separately
-        5. train it
-        6. test it
-
-        :param user_id: the id of the user for which you wanted to train and test
-        :type user_id:  int
-        """
-        # train it
-        # test it
-
-        # sort neighbors according to the similarity
-        neighbors = self.sort_neighbors(user_id)
-
-        ratings_by_user_id = list(self.data.get_user_by_id(user_id).get_movie_rating())
-        
-        # find how many movies user_name_of(user_id) has rated
-        nratings_by_user_id = len(ratings_by_user_id)
-
-        # divide the number of ratings to 80% (for training) and 20% (for test)
-        nratings_for_train  = int(nratings_by_user_id * .8)
-        nratings_for_test   = nratings_by_user_id - nratings_for_train
-
-        ratings_for_train = ratings_by_user_id[:nratings_for_train]
-        ratings_for_test  = ratings_by_user_id[nratings_for_train:]
-
-        # create ndarray both from 80% and 20% of the information separately
-        train_feature, train_y = self.create_ndarray_for_features(user_id, ratings_for_train, neighbors)
-        test_feature, test_y   = self.create_ndarray_for_features(user_id, ratings_for_test, neighbors)
-
-        print(train_feature.shape, train_y.ravel().reshape((train_feature.shape[0], 1, 5)).shape)
-
-        # train it
-        NN = ann.Neural_Network()
-        NN.backpropagation(train_feature, train_y.ravel().reshape((train_feature.shape[0], 1, 5)), .09)
-
-        #print(NN.W[2])
-
-        # test it
-        for i in range(len(ratings_for_test)):
-            print(self.scale(NN.feedforward(test_feature[i])), list(test_y[0][i]).index(1) + 1)
-
     @staticmethod
     def scale(l):
         l = l[0]
@@ -134,40 +45,6 @@ class Predict:
                 no = i + 1
                 val = x
         return no
-
-    def predict_by_GD(self, user_id):
-        # sort neighbors according to the similarity
-        neighbors = self.sort_neighbors(user_id)
-
-        ratings_by_user_id = list(self.data.get_user_by_id(user_id).get_movie_rating())
-        
-        # find how many movies user_name_of(user_id) has rated
-        nratings_by_user_id = len(ratings_by_user_id)
-
-        # divide the number of ratings to 80% (for training) and 20% (for test)
-        nratings_for_train  = int(nratings_by_user_id * .8)
-        nratings_for_test   = nratings_by_user_id - nratings_for_train
-
-        ratings_for_train = ratings_by_user_id[:nratings_for_train]
-        ratings_for_test  = ratings_by_user_id[nratings_for_train:]
-
-        # create ndarray both from 80% and 20% of the information separately
-        train_feature, train_y = self.create_ndarray_for_features(user_id, ratings_for_train, neighbors)
-        test_feature, test_y   = self.create_ndarray_for_features(user_id, ratings_for_test, neighbors)
-
-        training_example = []
-        for X, y in list(zip(train_feature, train_y)):
-            training_example.append((X, y))
-
-        # train it
-        NN = ann.Neural_Network()
-        NN.GD(training_example, 0.003)
-
-        #print(NN.W[2])
-
-        # test it
-        for i in range(len(ratings_for_test)):
-            print(NN.feedforward(test_feature[i]), test_y[i])
 
     @staticmethod
     def f(rating):
