@@ -57,9 +57,9 @@ class Neural_Network:
         """
         error = 0
         for feature, y in training_examples:
-            error += abs(convert.f_inverse_cap(list(feature)) - convert.f_inverse(list(y))) ** 2
+            error += abs(convert.f_inverse_cap(list(self.feedforward(feature)[0])) - convert.f_inverse(list(y))) ** 2
 
-        print(error)
+        print('Error', error)
             
     def backpropagation(self, training_examples, epoch, eta):
         """
@@ -81,7 +81,7 @@ class Neural_Network:
                 self.feedforward(feature)
 
                 # compute the error for the last level
-                self.delta[self.nlayer] = (self.alpha[self.nlayer] - y) * self.sigmoidPrime(self.beta[self.nlayer])
+                self.delta[self.nlayer] = (self.alpha[self.nlayer] - y.ravel().reshape(self.alpha[self.nlayer].shape)) * self.sigmoidPrime(self.beta[self.nlayer])
 
                 # backpropagate the error
                 for l in range(self.nlayer - 1, 1, -1):
