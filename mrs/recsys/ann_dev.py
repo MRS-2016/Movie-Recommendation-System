@@ -57,7 +57,7 @@ class Neural_Network:
         """
         error = 0
         for feature, y in training_examples:
-            error += abs(convert.f_inverse_cap(list(feature[0])) - convert.f_inverse(list(y))) ** 2
+            error += abs(convert.f_inverse_cap(list(feature)) - convert.f_inverse(list(y))) ** 2
 
         print(error)
             
