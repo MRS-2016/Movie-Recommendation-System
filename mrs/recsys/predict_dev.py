@@ -9,8 +9,7 @@ import numpy as np
 
 # local files
 from ..datamodel import loaddata, nitems, nusers
-from . import cf
-from . import ann_dev
+from . import cf, ann_dev
 
 class Predict:
     """
