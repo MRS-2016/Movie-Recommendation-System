@@ -89,7 +89,7 @@ class Neural_Network:
 
                 # update weights
                 for l in range(self.nlayer, 1, -1):
-                    self.W[l] -= eta * (self.alpha[l - 1].T).dot(self.delta[l])
+                    self.W[l] -= (eta / len(training_examples)) * (self.alpha[l - 1].T).dot(self.delta[l])
 
         
     @staticmethod
