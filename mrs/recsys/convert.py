@@ -8,6 +8,7 @@ def f_inverse_cap(l):
             no = i + 1
             val = x
             return no
+    return no
 
 def f_inverse(l):
     return l.index(1) + 1
