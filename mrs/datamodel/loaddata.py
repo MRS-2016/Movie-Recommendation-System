@@ -57,12 +57,22 @@ class Data:
         """
         return self._users
 
+    def get_user_by_id(self, user_id):
+        """
+        """
+        return self._users[user_id]
+
     def get_items(self):
         """
         :return: :py:attr:`_items`
         :rtype:  dict
         """
         return self._items
+
+    def get_item_by_id(self, item_id):
+        """
+        """
+        return self._items[item_id]
 
     def get_rating_matrix(self):
         """
