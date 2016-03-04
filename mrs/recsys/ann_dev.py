@@ -75,7 +75,7 @@ class Neural_Network:
             # randomly shuffle the training examples in the training set
             shuffle(training_examples)
 
-            calculate_error(training_examples)
+            self.calculate_error(training_examples)
             
             for feature, y in training_examples:
                 self.feedforward(feature)
