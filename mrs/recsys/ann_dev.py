@@ -10,7 +10,7 @@ import numpy as np
 from random import shuffle
 
 # local files
-from . import predict_dev
+from .predict_dev import f_inverse_cap, f_inverse
 
 class Neural_Network:
     """
@@ -57,7 +57,7 @@ class Neural_Network:
         """
         error = 0
         for feature, y in training_examples:
-            error += abs(predict_dev.f_inverse_cap(list(feature[0])) - predict_dev.f_inverse(list(y))) ** 2
+            error += abs(f_inverse_cap(list(feature[0])) - f_inverse(list(y))) ** 2
 
         print(error)
             
