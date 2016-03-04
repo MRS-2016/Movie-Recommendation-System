@@ -230,7 +230,7 @@ class Predict:
 
         # train it
         NN = ann_dev.Neural_Network()
-        NN.backpropagation(train, 200, .003)
+        NN.backpropagation(train, 600, .003)
 
         for feature, y in test:
             print(convert.f_inverse_cap(list(NN.feedforward(feature)[0])), convert.f_inverse(list(y)))
