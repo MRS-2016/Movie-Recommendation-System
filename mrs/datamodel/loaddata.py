@@ -74,7 +74,7 @@ class Data:
         """
         return self._items[item_id]
 
-    def get_rating_matrix(self):
+    def get_rating_matrix_with_nan(self):
         """
         :return: :py:attr:`mrs.datamodel.matrix.Matrix.rating_matrix`
         :rtype:  ndarray
@@ -93,3 +93,10 @@ class Data:
         """
         m = Matrix()
         return m.create_rating_matrix(self._users)
+
+
+    def get_rating_matrix_with_zero(self):
+        """
+        :return: the user item matrix with missing values as zero
+        """
+        return Matrix().create_rating_matrix_with_missing_as_zero(self._users)
