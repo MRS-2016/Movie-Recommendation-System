@@ -18,8 +18,8 @@ class Neural_Network:
 
     The index from 1 to :param nlayer: of :py:attr:`beta` and :py:attr:`W` contains ndarrays for the corresponding layers. The reason is we can flexibly change the number of layers.
     """
-    def __init__(self, nlayer = 3):
-        self.layerSize = [0, 19, 9, 5]
+    def __init__(self, nlayer = 4):
+        self.layerSize = [0, 19, 30, 15, 5]
         self.cost = float('inf')
         
         self.nlayer = nlayer
@@ -59,7 +59,7 @@ class Neural_Network:
         for feature, y in training_examples:
             error += abs(convert.f_inverse_cap(list(self.feedforward(feature)[0])) - convert.f_inverse(list(y))) ** 2
 
-        print('Error', error)
+        print('Error', error / len(training_examples))
             
     def backpropagation(self, training_examples, epoch, eta):
         """
