@@ -19,7 +19,7 @@ class Matrix:
         
         for user_id, user_profile in users.items():
             for movie, rating in user_profile.get_movie_rating().items():
-                self.rating_matrix[user_id, movie] = rating[0]
+                rating_matrix[user_id, movie] = rating[0]
 
         return rating_matrix
 
@@ -33,6 +33,6 @@ class Matrix:
 
         for user_id, user_profile in users.items():
             for movie, rating in user_profile.get_movie_rating().items():
-                self.rating_matrix[user_id, movie] = rating[0]
+                rating_matrix[user_id, movie] = rating[0]
 
         return rating_matrix
