@@ -92,5 +92,4 @@ class Data:
         2.0
         """
         m = Matrix()
-        m.create_rating_matrix(self._users)
-        return m.rating_matrix
+        return m.create_rating_matrix(self._users)
