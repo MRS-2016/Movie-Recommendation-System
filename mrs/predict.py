@@ -86,7 +86,7 @@ class Predict:
 
 
 if __name__ == '__main__':
-    base = '/media/windows7/B.Tech/Project/ml-100k'
+    base = os.path.join(os.path.abspath('..'), 'ml-100k')
     
     d = Data()
     d.n_user_item(os.path.join(base, 'u.info'))

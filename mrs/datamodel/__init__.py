@@ -7,8 +7,11 @@
 This is responsible for loading the data from the data set and creating user and item objects
 """
 
+# library files
+import os
+
 # path to the data set
-data_location = '/media/windows7/B.Tech/Project/ml-100k'
+data_location = os.path.join(os.getcwd(), 'ml-100k')
 
 user_dataset   = '/u.user'
 item_dataset   = '/u.item'
