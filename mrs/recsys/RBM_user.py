@@ -1,7 +1,14 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+# library packages
+from time import time
+import pickle
+
+# third party packages
 import numpy as np
+
+# local files
 from ..datamodel import loaddata
 
 class RBM_User:
@@ -21,7 +28,7 @@ class RBM_User:
         return self.logistic_function(v.dot(self.weights))
 
     def negative_phase(self, h):
-        v = (h.dot(self.weights.T) + self.bvisible) / 1000
+        v = (h.dot(self.weights.T) + self.bvisible) / self._nhidden
         return v, self.positive_phase(v)
 
     def logistic_function(self, x):
@@ -36,7 +43,7 @@ class Trainer:
         self.rating_matrix = self.data.get_rating_matrix_with_zero()
 
         # create the RBM
-        self.rbm = RBM_User(self.rating_matrix.shape[1] - 1, 1000)
+        self.rbm = RBM_User(self.rating_matrix.shape[1] - 1, 500)
 
     def split_rating_matrix_for_train_and_test(self):
         ntrain = int(self.rating_matrix.shape[0] * .8)
@@ -53,9 +60,10 @@ class Trainer:
         self.split_rating_matrix_for_train_and_test()
 
         for _ in range(epoch):
-            np.random.shuffle(self.train_rating_matrix)
+            start = time()
+            np.random.shuffle(self.rating_matrix)
             
-            for v in self.train_rating_matrix:
+            for v in self.rating_matrix:
                 v_plus = np.array([v[1:]])
                 # positive phase
                 h_plus = self.rbm.positive_phase(v_plus)
@@ -87,16 +95,17 @@ class Trainer:
                 self.rbm.bvisible += delta_v
                 self.rbm.bhidden  += delta_h
 
+            pickle.dump((self.rbm.bvisible, self.rbm.weights, self.rbm.bhidden), open('hyperparam.bin', 'wb'))
+            print('time:', time() - start)
             error = 0
             n = 0
-            for v in self.train_rating_matrix:
+            for v in self.rating_matrix:
                 v_plus = np.array([v[1:]])
                 h_plus = self.rbm.positive_phase(v_plus)
 
                 v_minus, h_minus = self.rbm.negative_phase(h_plus)
 
-                print(v_plus.shape, v_minus.shape)
                 error += np.sum((v_plus[v_plus != 0] - v_minus[v_plus != 0]) ** 2)
                 n += np.count_nonzero(v_plus)
 
-            print((error / n) ** .5)
+            print(_, (error / n) ** .5)
