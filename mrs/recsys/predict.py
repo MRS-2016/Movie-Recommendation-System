@@ -21,7 +21,7 @@ class Predict:
         self.data = loaddata.Data()
         self.data.load_data()
         
-        self.rating_matrix      = self.data.get_rating_matrix()
+        self.rating_matrix      = self.data.get_rating_matrix_with_nan()
         self.correlation_matrix = cf.Correlation().pearson(self.rating_matrix)
 
     def sort_neighbors(self, user_id):
