@@ -9,7 +9,7 @@ import numpy as np
 
 # local files
 from ..datamodel import loaddata, nitems, nusers
-from . import cf, ann_dev, convert
+from . import cf, ann, convert
 
 class Predict:
     """
@@ -106,7 +106,7 @@ class Predict:
         test  = self.create_training_examples_with_item(ratings_for_test)
 
         # train it
-        NN = ann_dev.Neural_Network()
+        NN = ann.Neural_Network()
         NN.backpropagation(train, 600, .5)
 
         for feature, y in test:
