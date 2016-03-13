@@ -95,8 +95,8 @@ class Trainer:
         :type learning_rate:  float
 
         .. note:: The current state of the function doesn't consider the training and testing
-        instead it considers the whole matrix as training. It prints the amount of time
-        taken for each epoch and error at that point of time
+                  instead it considers the whole matrix as training. It prints the amount of time
+                  taken for each epoch and error at that point of time
         """
 
         self.split_rating_matrix_for_train_and_test()
