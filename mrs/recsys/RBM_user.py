@@ -12,6 +12,14 @@ import numpy as np
 from ..datamodel import loaddata
 
 class RBM_User:
+    """
+    Restricted Boltzmann Machine
+    
+    :param nvisible: Number of neurons on the visible layer
+    :type nvisible:  int
+    :param nhidden:  Number of neurons on the hidden layer
+    :type nhidden:   int
+    """
     def __init__(self, nvisible, nhidden):
         self._nvisible = nvisible
         self._nhidden  = nhidden
@@ -24,10 +32,27 @@ class RBM_User:
     def positive_phase(self, v):
         """
         Positive phase of the RBM.
+
+        :param v: input to the visible layer
+        :type v:  ndarray
+        :return:  the output of the hidden layer
+        :rtype:   ndarray
         """
         return self.logistic_function(v.dot(self.weights))
 
     def negative_phase(self, h):
+        """
+        Negative phase of the RBM
+
+        This phase feeds input to the hidden layer and then propagates towards
+        the visible layer and then again from the visible layer it propagates
+        towards the hidden layer.
+
+        :param h: input to the hidden layer from the opposite side
+        :type h:  ndarray
+        :return:  output of the visible layer when run through backwards and output of the hidden layer
+        :rtype:   tuple
+        """
         v = (h.dot(self.weights.T) + self.bvisible) / self._nhidden
         return v, self.positive_phase(v)
 
@@ -37,6 +62,9 @@ class RBM_User:
 
 class Trainer:
     def __init__(self):
+        """
+        class to train and test the RBM model
+        """
         # load the data
         self.data = loaddata.Data()
         self.data.load_data()
@@ -46,6 +74,9 @@ class Trainer:
         self.rbm = RBM_User(self.rating_matrix.shape[1] - 1, 500)
 
     def split_rating_matrix_for_train_and_test(self):
+        """
+        The whole rating matrix is divided into 80% and 20% for training and testing respectively
+        """
         ntrain = int(self.rating_matrix.shape[0] * .8)
         ntest  = self.rating_matrix.shape[0] - ntrain
 
@@ -54,7 +85,18 @@ class Trainer:
 
     def train(self, epoch, cdk, learning_rate):
         """
-        train the model
+        Train the model
+
+        :param epoch: Number of iterations
+        :type epoch:  int
+        :param cdk:   Number of iterations in negative phase of contrastive divergence
+        :type cdk:    int
+        :param learning_rate: learning rate of the model
+        :type learning_rate:  float
+
+        .. note:: The current state of the function doesn't consider the training and testing
+        instead it considers the whole matrix as training. It prints the amount of time
+        taken for each epoch and error at that point of time
         """
 
         self.split_rating_matrix_for_train_and_test()
