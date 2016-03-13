@@ -20,21 +20,6 @@ class Predict:
     def __init__(self):
         self.data = loaddata.Data()
         self.data.load_data()
-        
-        self.rating_matrix      = self.data.get_rating_matrix_with_nan()
-        self.correlation_matrix = cf.Correlation().pearson(self.rating_matrix)
-
-    def sort_neighbors(self, user_id):
-        """
-        sort the neighbors in descending according to the correlation between users
-        
-        :param user_id: the id of the user for which the neighbors are going to be calculated
-        :type user_id:  int
-        """
-        # sort in descending order by correlation value of np.nan filtered values from user ids with their correlation with user_id
-        # l contains list of tuple of ids of users and correlation with user_name_of(user_id)
-        l = sorted(list(filter(lambda v: -1. <= v[1] <= 1., zip(range(nusers + 1), self.correlation_matrix[user_id]))), key = lambda v: -v[1])
-        return l
 
     @staticmethod
     def scale(l):
@@ -58,6 +43,12 @@ class Predict:
         l[rating - 1] = 1
         return l
 
+class PredictNeuralNetwork(Predict):
+    def __init__(self):
+        Predict.__init__(self)
+        self.rating_matrix      = self.data.get_rating_matrix_with_nan()
+        self.correlation_matrix = cf.Correlation().pearson(self.rating_matrix)
+
     def create_training_examples_with_item(self, ratings):
         """
         :param ratings: list of tuples with item_id at 0th index and rating at 1th index
@@ -74,7 +65,7 @@ class Predict:
     def create_training_examples_with_item_and_user_rating(self):
         """
         """
-        pass
+        raise NotImplementedError
 
     def training_and_test_for_an_user_with_item(self, user_id):
         """
@@ -128,4 +119,4 @@ class Predict:
         :param user_id: the id of the user for which you wanted to train and test
         :type user_id:  int
         """
-        pass
+        raise NotImplementedError
