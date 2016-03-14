@@ -4,12 +4,17 @@
 # this module is responsible for loading the data by calling the necessary information from **loaddata** module from datamodel directory and then calling necessary algorithms to predict the score
 # note that this will act as intermediary file for giving result by interacting with all other files
 
+# library packages
+import pickle
+
 # third party packages
 import numpy as np
 
 # local files
 from ..datamodel import loaddata, nitems, nusers
 from . import cf, ann, convert
+from . import hyperparam_loc
+from . import RBM_user
 
 class Predict:
     """
@@ -120,3 +125,42 @@ class PredictNeuralNetwork(Predict):
         :type user_id:  int
         """
         raise NotImplementedError
+
+class PredictRBM(Predict):
+    def __init__(self):
+        Predict.__init__(self)
+        self.rating_matrix = self.data.get_rating_matrix_with_zero()
+
+        # create the RBM
+        self.rbm = RBM_user.RBM_User(self.rating_matrix.shape[1] - 1, 500)
+
+    def load_hyperparameters(self):
+        """
+        loads the hyperparameters from the file which has been saved by training the RBM model
+        """
+        self.hyperparam   = pickle.load(open(hyperparam_loc, 'rb'))
+        self.rbm.bvisible = self.hyperparam[0]
+        self.rbm.weights  = self.hyperparam[1]
+        self.rbm.bhidden  = self.hyperparam[2]
+
+    def train_rbm(self):
+        """
+        Train the rbm by contrastive divergence
+        """
+        t = RBM_user.Trainer(self.data, self.rating_matrix, self.rbm)
+        t.train(1000, 1, 0.05)
+
+    def predict(self, user_id, movie_id = None):
+        """
+        Predict how much rating the user will give
+
+        :param user_id:  id of a particular user
+        :type user_id:   int
+        :param movie_id: id of a particular movie
+        :type movie_id:  int
+        """
+        user_vector = self.rating_matrix[user_id][1:]
+        h = self.rbm.positive_phase(user_vector)
+        v, h = self.rbm.negative_phase(h)
+        if movie_id != None: return v[0][movie_id]
+        else: return v[0]

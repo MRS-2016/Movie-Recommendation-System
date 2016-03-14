@@ -61,17 +61,13 @@ class RBM_User:
         return 1 / (1 + np.exp(-self.bhidden + x))
 
 class Trainer:
-    def __init__(self):
+    def __init__(self, data, rating_matrix, rbm):
         """
         class to train and test the RBM model
         """
-        # load the data
-        self.data = loaddata.Data()
-        self.data.load_data()
-        self.rating_matrix = self.data.get_rating_matrix_with_zero()
-
-        # create the RBM
-        self.rbm = RBM_User(self.rating_matrix.shape[1] - 1, 500)
+        self.data = data
+        self.rating_matrix = rating_matrix
+        self.rbm = rbm
 
     def split_rating_matrix_for_train_and_test(self):
         """
