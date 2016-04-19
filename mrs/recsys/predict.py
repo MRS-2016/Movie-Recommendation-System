@@ -4,12 +4,17 @@
 # this module is responsible for loading the data by calling the necessary information from **loaddata** module from datamodel directory and then calling necessary algorithms to predict the score
 # note that this will act as intermediary file for giving result by interacting with all other files
 
+# library packages
+import pickle
+
 # third party packages
 import numpy as np
 
 # local files
 from ..datamodel import loaddata, nitems, nusers
 from . import cf, ann, convert
+from . import hyperparam_loc
+from . import RBM_user
 
 class Predict:
     """
@@ -20,21 +25,6 @@ class Predict:
     def __init__(self):
         self.data = loaddata.Data()
         self.data.load_data()
-        
-        self.rating_matrix      = self.data.get_rating_matrix()
-        self.correlation_matrix = cf.Correlation().pearson(self.rating_matrix)
-
-    def sort_neighbors(self, user_id):
-        """
-        sort the neighbors in descending according to the correlation between users
-        
-        :param user_id: the id of the user for which the neighbors are going to be calculated
-        :type user_id:  int
-        """
-        # sort in descending order by correlation value of np.nan filtered values from user ids with their correlation with user_id
-        # l contains list of tuple of ids of users and correlation with user_name_of(user_id)
-        l = sorted(list(filter(lambda v: -1. <= v[1] <= 1., zip(range(nusers + 1), self.correlation_matrix[user_id]))), key = lambda v: -v[1])
-        return l
 
     @staticmethod
     def scale(l):
@@ -58,6 +48,12 @@ class Predict:
         l[rating - 1] = 1
         return l
 
+class PredictNeuralNetwork(Predict):
+    def __init__(self):
+        Predict.__init__(self)
+        self.rating_matrix      = self.data.get_rating_matrix_with_nan()
+        self.correlation_matrix = cf.Correlation().pearson(self.rating_matrix)
+
     def create_training_examples_with_item(self, ratings):
         """
         :param ratings: list of tuples with item_id at 0th index and rating at 1th index
@@ -74,7 +70,7 @@ class Predict:
     def create_training_examples_with_item_and_user_rating(self):
         """
         """
-        pass
+        raise NotImplementedError
 
     def training_and_test_for_an_user_with_item(self, user_id):
         """
@@ -107,7 +103,7 @@ class Predict:
 
         # train it
         NN = ann.Neural_Network()
-        NN.backpropagation(train, 300, .5)
+        NN.backpropagation(train, 600, .5)
 
         for feature, y in test:
             print(convert.f_inverse_cap(list(NN.feedforward(feature)[0])), convert.f_inverse(list(y)))
@@ -128,4 +124,43 @@ class Predict:
         :param user_id: the id of the user for which you wanted to train and test
         :type user_id:  int
         """
-        pass
+        raise NotImplementedError
+
+class PredictRBM(Predict):
+    def __init__(self):
+        Predict.__init__(self)
+        self.rating_matrix = self.data.get_rating_matrix_with_zero()
+
+        # create the RBM
+        self.rbm = RBM_user.RBM_User(self.rating_matrix.shape[1] - 1, 500)
+
+    def load_hyperparameters(self):
+        """
+        loads the hyperparameters from the file which has been saved by training the RBM model
+        """
+        self.hyperparam   = pickle.load(open(hyperparam_loc, 'rb'))
+        self.rbm.bvisible = self.hyperparam[0]
+        self.rbm.weights  = self.hyperparam[1]
+        self.rbm.bhidden  = self.hyperparam[2]
+
+    def train_rbm(self):
+        """
+        Train the rbm by contrastive divergence
+        """
+        t = RBM_user.Trainer(self.data, self.rating_matrix, self.rbm)
+        t.train(1000, 1, 0.05)
+
+    def predict(self, user_id, movie_id = None):
+        """
+        Predict how much rating the user will give
+
+        :param user_id:  id of a particular user
+        :type user_id:   int
+        :param movie_id: id of a particular movie
+        :type movie_id:  int
+        """
+        user_vector = self.rating_matrix[user_id][1:]
+        h = self.rbm.positive_phase(user_vector)
+        v, h = self.rbm.negative_phase(h)
+        if movie_id != None: return v[0][movie_id]
+        else: return v[0]
