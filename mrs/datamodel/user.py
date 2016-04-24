@@ -86,3 +86,9 @@ class User:
         :type data: list
         """
         self._movie_rating[data[0]] = data[1:]
+
+    def mean_rating(self):
+        """
+        returns the mean rating of this user
+        """
+        return sum(map(lambda x: x[0], self._movie_rating.values())) / len(self._movie_rating)

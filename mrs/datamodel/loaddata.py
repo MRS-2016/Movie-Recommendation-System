@@ -100,3 +100,9 @@ class Data:
         :return: the user item matrix with missing values as zero
         """
         return Matrix().create_rating_matrix_with_missing_as_zero(self._users)
+
+    def get_mean_rating_of_user(self, a):
+        """
+        """
+        
+        return self._users[a].mean_rating()
