@@ -103,12 +103,18 @@ class PredictNeuralNetwork(Predict):
 
         # train it
         NN = ann.Neural_Network()
-        NN.backpropagation(train, 600, .5)
+        NN.backpropagation(train, 700, .05)
 
-        for feature, y in test:
-            print(convert.f_inverse_cap(list(NN.feedforward(feature)[0])), convert.f_inverse(list(y)))
+        #for feature, y in test:
+            #print(convert.f_inverse_cap(list(NN.feedforward(feature)[0])), convert.f_inverse(list(y)))
 
         # test it
+        whole = self.create_training_examples_with_item(list(map(lambda x: (x, [1, None]), range(1, nitems + 1))))
+        ans = []
+        for feature, y in whole:
+            ans.append(convert.f_inverse_cap(list(NN.feedforward(feature)[0])))
+
+        return ans
 
     def training_and_test_for_an_user_with_item_and_user_rating(self, user_id):
         """

@@ -31,6 +31,13 @@ class Neural_Network:
             self.beta[l] = np.random.randn(self.layerSize[l])
             
             self.W[l] = np.random.randn(self.layerSize[l - 1], self.layerSize[l])
+            
+        # final hyperparameters
+        self.final_beta = None
+        self.final_alpha = None
+        self.final_W = None
+        self.final_delta = None
+        self.final_error = float('inf')
 
     def feedforward(self, row):
         # set the input
@@ -59,7 +66,17 @@ class Neural_Network:
         for feature, y in training_examples:
             error += abs(convert.f_inverse_cap(list(self.feedforward(feature)[0])) - convert.f_inverse(list(y))) ** 2
 
-        print('Error', error / len(training_examples))
+
+        cur_error = (error / len(training_examples)) ** .5
+        
+        # update the final hyperparamters
+        if cur_error < self.final_error:
+            self.final_beta = self.beta
+            self.final_alpha = self.alpha
+            self.final_W = self.W
+            self.final_delta = self.delta
+            self.final_error = cur_error
+            print('Error', cur_error)
             
     def backpropagation(self, training_examples, epoch, eta):
         """
@@ -90,6 +107,13 @@ class Neural_Network:
                 # update weights
                 for l in range(self.nlayer, 1, -1):
                     self.W[l] -= (eta / len(training_examples)) * (self.alpha[l - 1].T).dot(self.delta[l])
+
+
+        # load the optimal hyperparameters
+        self.beta = self.final_beta
+        self.alpha = self.final_alpha
+        self.W = self.final_W
+        self.delta = self.final_delta
 
         
     @staticmethod
