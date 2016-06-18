@@ -1,0 +1,343 @@
+{
+ "name": "Movie Genres",
+ "children": [
+  {      "name":"Unknown",       
+        "children": [ 
+{"name": "Li'l Quinquin", "size":2000},
+{"name": "Pablo (2012)", "size":3500},
+{"name": "The Big Broadcast of 1936 (1935)", "size":2000},
+{"name": "Round Trip to Heaven (1992)", "size":4000},
+{"name": "The 50 Year Argument (2014)", "size":2500},
+{"name": "The Take (2009)", "size":3500}
+]
+   },
+    {      "name":"Action",       
+        "children": [ 
+{"name": "Romper Stomper (1992)", "size":3700},
+{"name": "Shadow, The (1994)", "size":3190},
+{"name": "Blade Runner (1982)", "size":4170},
+{"name": "Striking Distance (1993)", "size":3000},
+{"name": "Super Mario Bros. (1993)", "size":1810},
+{"name": "Surviving the Game (1994)", "size":2400},
+{"name": "Terminal Velocity (1994)", "size":2850},
+{"name": "Three Musketeers, The (1993)", "size":3050},
+{"name": "Tombstone (1993)", "size":3640},
+{"name": "Pagemaster, The (1994)", "size":2750},
+{"name": "Terminator 2: Judgment Day (1991)", "size":3960},
+{"name": "Batman (1989)", "size":3390},
+{"name": "Love and a .45 (1994)", "size":2000},
+{"name": "Heavy Metal (1981)", "size":3130},
+{"name": "Hellraiser: Bloodline (1996)", "size":1830},
+{"name": "Courage Under Fire (1996)", "size":3650},
+{"name": "Mission: Impossible (1996)", "size":3440},
+{"name": "Braveheart (1995)", "size":4110}
+]
+   },
+   {      "name":"Adventure",       
+        "children": [ 
+{"name": "Judge Dredd (1995)", "size":2640},
+{"name": "Toy Story (1995)", "size":3910},
+{"name": "Jumanji (1995)", "size":3350},
+{"name": "Tom and Huck (1995)", "size":3670},
+{"name": "Balto (1995)", "size":3440},
+{"name": "City of Lost Children, The (Cit? des enfants pe...", "size":4230},
+{"name": "Wings of Courage (1995)", "size":2500},
+{"name": "Lamerica (1994)", "size":3000},
+{"name": "Indian in the Cupboard, The (1995)", "size":3050},
+{"name": "Bottle Rocket (1996)", "size":3750},
+{"name": "Muppet Treasure Island (1996)", "size":3420},
+{"name": "NeverEnding Story III, The (1994)", "size":2130},
+{"name": "Amazing Panda Adventure, The (1995)", "size":3670},
+{"name": "Apollo 13 (1995)", "size":3970},
+{"name": "Beyond Rangoon (1995)", "size":3290},
+{"name": "Wild Bunch, The (1969)", "size":4020}
+]
+   },
+   {      "name":"Animation",       
+        "children": [ 
+{"name": "Free Willy 2: The Adventure Home (1995)", "size":2440},
+{"name": "Pocahontas (1995)", "size":3110},
+{"name": "Hop (2011)", "size":3500},
+{"name": "My Dog Tulip (2009)", "size":2000},
+{"name": "Idiots and Angels (2008)", "size":3000},
+{"name": "Smurfs, The (2011)", "size":2000},
+{"name": "Arthur Christmas (2011)", "size":3000},
+{"name": "Chico & Rita (2010)", "size":2000},
+{"name": "Dr. Seuss' The Lorax (2012)", "size":3670},
+{"name": "Presto (2008)", "size":4000},
+{"name": "Cat in the Hat, The (1971)", "size":3500},
+{"name": "For the Birds (2000)", "size":4250},
+{"name": "Frankenweenie (2012)", "size":3500}
+]
+   },
+   {      "name":"Children",       
+        "children": [ 
+{"name": "Babe (1995)", "size":3620},
+{"name": "Big Green, The (1995)", "size":3000},
+{"name": "Dunston Checks In (1996)", "size":2420},
+{"name": "Kim (1950)", "size":4000},
+{"name": "Harriet the Spy (1996)", "size":3500},
+{"name": "Kazaam (1996)", "size":2640},
+{"name": "Matilda (1996)", "size":3220},
+{"name": "House Arrest (1996)", "size":3130},
+{"name": "First Kid (1996)", "size":4170},
+{"name": "Love Bug, The (1969)", "size":2830},
+{"name": "Old Yeller (1957)", "size":3170},
+{"name": "Parent Trap, The (1961)", "size":3540},
+{"name": "Pollyanna (1960)", "size":4170},
+{"name": "Prancer (1989)", "size":3000}
+]
+   },
+   {      "name":"Comedy",       
+        "children": [ 
+{"name": "Sabrina (1995)", "size":3380},
+{"name": "American President, The (1995)", "size":3730},
+{"name": "Dracula: Dead and Loving It (1995)", "size":2830},
+{"name": "Four Rooms (1995)", "size":3640},
+{"name": "Ace Ventura: When Nature Calls (1995)", "size":2640},
+{"name": "Get Shorty (1995)", "size":3490},
+{"name": "Clueless (1995)", "size":3280},
+{"name": "To Die For (1995)", "size":3360},
+{"name": "Mighty Aphrodite (1995)", "size":3580},
+{"name": "Postman, The (Postino, Il) (1994)", "size":4050},
+{"name": "Two if by Sea (1996)", "size":2790},
+{"name": "Bio-Dome (1996)", "size":2290},
+{"name": "French Twist (Gazon maudit) (1995)", "size":3750},
+{"name": "Friday (1995)", "size":3720},
+{"name": "Kicking and Screaming (1995)", "size":4500},
+{"name": "Big Bully (1996)", "size":2250},
+{"name": "Blue Hawaii (1961)", "size":3000}
+]
+   },
+   {      "name":"Crime",       
+        "children": [ 
+{"name": "Jason's Lyric (1994)", "size":4000},
+{"name": "Above the Rim (1994)", "size":3500},
+{"name": "Carlito's Way (1993)", "size":3910},
+{"name": "Fresh (1994)", "size":4140},
+{"name": "Guilty as Sin (1993)", "size":2500},
+{"name": "Killing Zoe (1994)", "size":3500},
+{"name": "Perfect World, A (1993)", "size":3970},
+{"name": "Romeo Is Bleeding (1993)", "size":3390},
+{"name": "Trial by Jury (1994)", "size":4000},
+{"name": "True Romance (1993)", "size":4020},
+{"name": "Croupier (1998)", "size":3830},
+{"name": "Watcher, The (2000)", "size":1500},
+{"name": "Way of the Gun, The (2000)", "size":3950},
+{"name": "Under Suspicion (2000)", "size":3330},
+{"name": "Detour (1945)", "size":3000}
+]
+   },
+   {      "name":"Documentary",       
+        "children": [ 
+{"name": "Promises (2001)", "size":2500},
+{"name": "Atomic Cafe, The (1982)", "size":3130},
+{"name": "Dogtown and Z-Boyz (2001)", "size":3500},
+{"name": "Last Waltz, The (1978)", "size":3580},
+{"name": "Powaqqatsi (1988)", "size":4000},
+{"name": "Bowling for Columbine (2002)", "size":3750},
+{"name": "Fidel (2001)", "size":2500},
+{"name": "Naqoyqatsi (2002)", "size":4500},
+{"name": "Faces of Death 2 (1981)", "size":1250},
+{"name": "Faces of Death 3 (1985)", "size":1250},
+{"name": "Derrida (2002)", "size":2500},
+{"name": "Vernon, Florida (1981)", "size":2000},
+{"name": "Burden of Dreams (1982)", "size":3000},
+{"name": "Lost in La Mancha (2002)", "size":4290}
+]
+   },
+   {      "name":"Drama",       
+        "children": [ 
+{"name": "Vertigo (1958)", "size":4170},
+{"name": "Gaslight (1944)", "size":3900},
+{"name": "Casablanca (1942)", "size":4240},
+{"name": "Gone with the Wind (1939)", "size":3960},
+{"name": "Sunset Blvd. (a.k.a. Sunset Boulevard) (1950)", "size":4220},
+{"name": "Citizen Kane (1941)", "size":4400},
+{"name": "All About Eve (1950)", "size":4200},
+{"name": "Rebecca (1940)", "size":4170},
+{"name": "Foreign Correspondent (1940)", "size":3710},
+{"name": "Affair to Remember, An (1957)", "size":4070},
+{"name": "Ghost and Mrs. Muir, The (1947)", "size":3880},
+{"name": "Lost Horizon (1937)", "size":3790},
+{"name": "Giant (1956)", "size":4100}
+]
+   },
+   {      "name":"Fantasy",       
+        "children": [ 
+{"name": "Prophecy, The (1995)", "size":3250},
+{"name": "Candyman: Farewell to the Flesh (1995)", "size":2670},
+{"name": "Brazil (1985)", "size":4050},
+{"name": "Dracula (Bram Stoker's Dracula) (1992)", "size":3170},
+{"name": "Tales from the Darkside: The Movie (1990)", "size":3000},
+{"name": "Sleepy Hollow (1999)", "size":3710},
+{"name": "Ninth Gate, The (1999)", "size":3260},
+{"name": "Evil Dead, The (1981)", "size":3500},
+{"name": "Made in Heaven (1987)", "size":2750},
+{"name": "Last Wave, The (1977)", "size":3500},
+{"name": "Queen of the Damned (2002)", "size":2000},
+{"name": "Xanadu (1980)", "size":2000},
+{"name": "Company of Wolves, The (1984)", "size":3000}
+]
+   },
+   {      "name":"Film-Noir",       
+        "children": [ 
+{"name": "Suture (1993)", "size":3500},
+{"name": "Force of Evil (1948)", "size":4000},
+{"name": "Maltese Falcon, The (1941)", "size":4170},
+{"name": "Notorious (1946)", "size":4310},
+{"name": "Raw Deal (1948)", "size":4000},
+{"name": "T-Men (1947)", "size":4000},
+{"name": "Third Man, The (1949)", "size":4290},
+{"name": "Out of the Past (1947)", "size":3670},
+{"name": "Suspicion (1941)", "size":3830},
+{"name": "Big Combo, The (1955)", "size":3000},
+{"name": "Railroaded! (1947)", "size":3000},
+{"name": "Angel Heart (1987)", "size":3460},
+{"name": "Kiss Me Deadly (1955)", "size":4330},
+{"name": "D.O.A. (1988)", "size":2500},
+{"name": "Scarlet Street (1945)", "size":3500}
+]
+   },
+   {      "name":"Horror",       
+        "children": [ 
+{"name": "Last Exorcism Part II, The (2013)", "size":3500},
+{"name": "Evil Dead (2013)", "size":3750},
+{"name": "Resolution (2012)", "size":2000},
+{"name": "Afflicted, The (2010)", "size":4500},
+{"name": "Dark Circles (2013) ", "size":4000},
+{"name": "Maniac (2012)", "size":3500},
+{"name": "American Mary (2012)", "size":4250},
+{"name": "V/H/S/2 (2013)", "size":3750},
+{"name": "Jug Face (2013)", "size":4000},
+{"name": "Conjuring, The (2013)", "size":4000},
+{"name": "You're Next (2011)", "size":4000},
+{"name": "Insidious: Chapter 2 (2013)", "size":3000},
+{"name": "Curse of Chucky (Child's Play 6) (2013)", "size":2750},
+{"name": "Dark Touch (2013)", "size":2500}
+]
+   },
+   {      "name":"Musical",       
+        "children": [ 
+{"name": "American in Paris, An (1951)", "size":3680},
+{"name": "Meet Me in St. Louis (1944)", "size":3620},
+{"name": "Gigi (1958)", "size":3830},
+{"name": "Inspector General, The (1949)", "size":4000},
+{"name": "Sound of Music, The (1965)", "size":3970},
+{"name": "Madame Butterfly (1995)", "size":4500},
+{"name": "Tommy (1975)", "size":3290},
+{"name": "South Pacific (1958)", "size":4130},
+{"name": "Gypsy (1962)", "size":3250},
+{"name": "Unsinkable Molly Brown, The (1964)", "size":2500},
+{"name": "Fantasticks, The (1995)", "size":2000}
+]
+   },
+   {      "name":"Mystery",       
+        "children": [ 
+{"name": "Blow Out (1981)", "size":3380},
+{"name": "Still of the Night (1982)", "size":3000},
+{"name": "Andromeda Strain, The (1971)", "size":3700},
+{"name": "Shattered (1991)", "size":3330},
+{"name": "Knight Moves (1992)", "size":3500},
+{"name": "Secret Window (2004)", "size":3310},
+{"name": "Body Double (1984)", "size":2670},
+{"name": "Fear X (2003)", "size":3000},
+{"name": "Gaslight (1940)", "size":2500},
+{"name": "Old Boy (2003)", "size":4070},
+{"name": "Keane (2004)", "size":3000},
+{"name": "Mirage (1965)", "size":4000},
+{"name": "Tall in the Saddle (1944)", "size":4000}
+]
+   },
+   {      "name":"Romance",       
+        "children": [ 
+{"name": "House of Mirth, The (2000)", "size":3330},
+{"name": "Claim, The (2000)", "size":4000},
+{"name": "Cherry 2000 (1987)", "size":2500},
+{"name": "Angel Eyes (2001)", "size":2500},
+{"name": "Happy Accidents (2000)", "size":4000},
+{"name": "Enigma (2001)", "size":3400},
+{"name": "Brown Sugar (2002)", "size":3000},
+{"name": "Rio Grande (1950)", "size":3500},
+{"name": "Grey Fox, The (1982)", "size":2500},
+{"name": "Code 46 (2003)", "size":2900},
+{"name": "Levottomat 3 (2004)", "size":1000},
+{"name": "Asylum (2005)", "size":1500},
+{"name": "Half Light (2006)", "size":2250}
+]
+   },
+   {      "name":"Sci-Fi",       
+        "children": [ 
+{"name": "Things to Come (1936)", "size":3500},
+{"name": "Boy and His Dog, A (1975)", "size":2000},
+{"name": "Final Cut, The (2004)", "size":2500},
+{"name": "Robinson Crusoe on Mars (1964)", "size":3000},
+{"name": "Futureworld (1976)", "size":2500},
+{"name": "Return, The (2006)", "size":1500},
+{"name": "Lathe of Heaven, The (1980)", "size":3500},
+{"name": "Dante 01 (2008)", "size":3500},
+{"name": "Stargate: Continuum (2008)", "size":3250},
+{"name": "Timecrimes (CronocrÕmenes, Los) (2007)", "size":3750},
+{"name": "Push (2009)", "size":3000},
+{"name": "Sleep Dealer (2008)", "size":3500},
+{"name": "Growth (2009)", "size":3500},
+{"name": "Cargo (2009)", "size":3750},
+{"name": "Skyline (2010)", "size":2250}
+]
+   },
+   {      "name":"Thriller",       
+        "children": [ 
+{"name": "Dark Mirror (2007)", "size":3000},
+{"name": "Peacock (2010)", "size":2500},
+{"name": "Night Must Fall (1937)", "size":2000},
+{"name": "Not Forgotten (2009)", "size":2500},
+{"name": "13 (2010)", "size":1500},
+{"name": "Spy in Black, The (1939)", "size":4000},
+{"name": "Games (1967)", "size":2000},
+{"name": "Formosa Betrayed (2009)", "size":3500},
+{"name": "Straw Dogs (2011)", "size":3000},
+{"name": "Hunter, The (2010)", "size":2000},
+{"name": "Paperboy, The (2012)", "size":1500},
+{"name": "Vehicle 19 (2013)", "size":2500},
+{"name": "Sealed Cargo (1951)", "size":3500}
+]
+   },
+   {      "name":"War",       
+        "children": [ 
+{"name": "Walk in the Sun, A (1945)", "size":4000},
+{"name": "Prisoner of the Mountains  (1996)", "size":3500},
+{"name": "Pork Chop Hill (1959)", "size":3750},
+{"name": "Run Silent Run Deep (1958)", "size":3250},
+{"name": "Cross of Iron (1977)", "size":4000},
+{"name": "Story of G.I. Joe (1945)", "size":4500},
+{"name": "Objective, Burma! (1945)", "size":3500},
+{"name": "Battle of Britain (1969)", "size":4000},
+{"name": "Duel at Diablo (1966)", "size":3000},
+{"name": "The Real Glory (1939)", "size":2000}
+]
+   },
+   {      "name":"Western",       
+        "children": [ 
+{"name": "Hour of the Gun (1967)", "size":2500},
+{"name": "Appaloosa (2008)", "size":3750},
+{"name": "Man with the Gun (1955)", "size":4000},
+{"name": "Escape from Fort Bravo (1953)", "size":2500},
+{"name": "Ride Lonesome (1959)", "size":3000},
+{"name": "Vengeance Valley (1951)", "size":3000},
+{"name": "Two Rode Together (1961)", "size":2500},
+{"name": "True Grit (2010)", "size":4070},
+{"name": "Run of the Arrow (1957)", "size":1000},
+{"name": "Meek's Cutoff (2010)", "size":4000},
+{"name": "The Hateful Eight (2015)", "size":5000},
+{"name": "The Dark Valley (2014)", "size":3000}
+]
+   }
+   
+   
+	
+	
+	
+	
+	]
+	
+	}
