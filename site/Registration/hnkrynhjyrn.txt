@@ -1,0 +1,113 @@
+<?php
+session_start();
+include_once('db.php');
+// Checking first page values for empty,If it finds any blank field then redirected to first page.
+/*if (isset($_POST['u_name'])){
+ if (empty($_POST['u_name']) || empty($_POST['f_name'])|| empty($_POST['l_name']) || empty($_POST['email']) || empty($_POST['password']) || empty($_POST['confirm']))
+ { 
+ 
+	// Setting error message
+	$_SESSION['error'] = "Mandatory field(s) are missing, Please fill it again";
+	header("location: page1_form.php"); // Redirecting to first page 
+ } 
+ 
+}*/
+
+//For Duplicate User name
+$uname = $_POST['u_name'];
+//echo $uname;
+$sql = mysql_query("select * from new_reg where U_name = '$uname'");
+$row = mysql_fetch_array($sql);
+$u = $row['U_name'];
+//echo $u;
+
+if($u != NULL)
+{
+	$_SESSION['error'] = "User Name Already Taken.Try Something Else !!!";
+	header("location: page1_form.php");//redirecting to first page
+}
+	$email = $_POST['email'];
+	$n  = filter_var($email,FILTER_VALIDATE_EMAIL);
+	
+	//echo $n;
+// After sanitization Validation is performed.
+if (!filter_var($email,FILTER_VALIDATE_EMAIL)){ 
+	
+	$_SESSION['error'] = "Invalid Email ID";
+	header("location: page1_form.php");//redirecting to first page
+	
+}
+
+//For password length
+if ( strlen($_POST['password']) < 4 ) 
+{
+	$_SESSION['error'] = "Password Length should be greater than 4 !!!!!";
+			header("location: page1_form.php"); //redirecting to first page
+   
+	
+}
+
+//For matching pwd with confirm pwd
+if (($_POST['password']) === ($_POST['confirm'])) {
+			foreach ($_POST as $key => $value) {
+				$_SESSION['post'][$key] = $value;
+			}
+		} 
+		else 
+		{
+			$_SESSION['error'] = "Password does not match with Confirm Password.";
+			header("location: page1_form.php"); //redirecting to first page
+		}
+?>
+<!DOCTYPE HTML>
+<html>
+ <head>
+ <title>MRS-Registration</title>
+ <link rel="stylesheet" href="style.css" />
+ </head>
+ <body>
+ <div class="container">
+ <div class="main">
+ <h2>Step 2</h2><hr/>
+ <span id="error">
+<?php
+// To show error of page 2.
+if (!empty($_SESSION['error_page2'])) {
+ echo $_SESSION['error_page2'];
+ unset($_SESSION['error_page2']);
+}
+?>
+ </span>
+ <form action="page3_form.php" method="post">
+ <label>Gender :<span>*</span></label>
+ <input type="radio" name="gender" value="male" required>Male
+ <input type="radio" name="gender" value="female">Female<br>
+ <label>Select Your Favourite Genre :<span>*</span></label>
+ <select multiple="multiple" name="genre" MULTIPLE SIZE="5"">
+ <option value="">----Select----</options>
+ <option value="Action">Action</option>
+								<option value="Adventure">Adventure</option>
+								<option value="Animation">Animation</option>
+								<option value="Children">Children's</option>
+								<option value="Comedy">Comedy</option>
+								<option value="Crime">Crime</option>
+								<option value="Documentary">Documentary</option>
+								<option value="Drama">Drama</option>
+								<option value="Fantasy">Fantasy</option>
+								<option value="Film-Noir">Film-Noir</option>
+								<option value="Horror">Horror</option>
+								<option value="Musical">Musical</option>
+								<option value="Mystery">Mystery</option>
+								<option value="Romance">Romance</option>
+								<option value="Sci-Fi">Sci-Fi</option>
+								<option value="Thriller">Thriller</option>
+								<option value="War">War</option>
+								<option value="Western">Western</option>
+ </select>
+ <input type="reset" value="Reset" />
+ <input type="submit" value="Next" />
+ </form>
+ </div>
+ </div>
+ </body>
+</html>
