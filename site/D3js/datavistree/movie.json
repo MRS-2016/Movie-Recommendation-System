@@ -1,0 +1,806 @@
+{
+ "name": "Genere",
+ "children": [ 
+ { 
+ "name": "Western",  
+ "level": "red", 
+ "children": [ 
+ {
+     "name": "Lawman (1971)",
+     "children": [{"name": "2.5" }]
+    },
+ {
+     "name": "Professionals, The (1966)",
+     "children": [{"name": "3.75" }]
+    },
+ {
+     "name": "Butch and Sundance: The Early Days (1979)",
+     "children": [{"name": "3" }]
+    },
+ {
+     "name": "Man of the West (1958)",
+     "children": [{"name": "4" }]
+    },
+ {
+     "name": "Hondo (1953)",
+     "children": [{"name": "4.5" }]
+    },
+ {
+     "name": "Naked Spur, The (1953)",
+     "children": [{"name": "3" }]
+    },
+ {
+     "name": "Soldier Blue (1970)",
+     "children": [{"name": "3.5" }]
+    },
+ {
+     "name": "Westerner, The (1940)",
+     "children": [{"name": "3" }]
+    },
+ {
+     "name": "Viva Zapata! (1952)",
+     "children": [{"name": "3.5" }]
+    },
+ {
+     "name": "Chato's Land (1972)",
+     "children": [{"name": "2" }]
+    }] },
+	{ "name": "War",    "children": [ {
+     "name": "Walk in the Sun, A (1945)",
+     "children": [{"name": "4" }]
+    },
+ {
+     "name": "Prisoner of the Mountains  (1996)",
+     "children": [{"name": "3.5" }]
+    },
+ {
+     "name": "Pork Chop Hill (1959)",
+     "children": [{"name": "3.75" }]
+    },
+ {
+     "name": "Run Silent Run Deep (1958)",
+     "children": [{"name": "3.25" }]
+    },
+ {
+     "name": "Cross of Iron (1977)",
+     "children": [{"name": "4" }]
+    },
+ {
+     "name": "Story of G.I. Joe (1945)",
+     "children": [{"name": "4.5" }]
+    },
+ {
+     "name": "Objective, Burma! (1945)",
+     "children": [{"name": "3.5" }]
+    },
+ {
+     "name": "Battle of Britain (1969)",
+     "children": [{"name": "4" }]
+    },
+ {
+     "name": "Duel at Diablo (1966)",
+     "children": [{"name": "3" }]
+    },
+ {
+     "name": "The Real Glory (1939)",
+     "children": [{"name": "2" }]
+    }] },
+	{ "name": "Thriller",    "children": [ {
+     "name": "Dark Mirror (2007)",
+     "children": [{"name": "3" }]
+    },
+ {
+     "name": "Peacock (2010)",
+     "children": [{"name": "2.5" }]
+    },
+ {
+     "name": "Night Must Fall (1937)",
+     "children": [{"name": "2" }]
+    },
+ {
+     "name": "Disappearance of Alice Creed, The (2009)",
+     "children": [{"name": "3.5" }]
+    },
+ {
+     "name": "Farewell (L'affaire Farewell) (2009)",
+     "children": [{"name": "3.75" }]
+    },
+ {
+     "name": "Not Forgotten (2009)",
+     "children": [{"name": "2.5" }]
+    },
+ {
+     "name": "13 (2010)",
+     "children": [{"name": "1.5" }]
+    },
+ {
+     "name": "Spy in Black, The (1939)",
+     "children": [{"name": "4" }]
+    },
+ {
+     "name": "Housemaid, The (Hanyo) (2010)",
+     "children": [{"name": "3" }]
+    },
+ {
+     "name": "Games (1967)",
+     "children": [{"name": "2" }]
+    }] },
+	{ "name": "Sci-Fi",    "children": [ {
+     "name": "Things to Come (1936)",
+     "children": [{"name": "3.5" }]
+    },
+ {
+     "name": "Boy and His Dog, A (1975)",
+     "children": [{"name": "2" }]
+    },
+ {
+     "name": "Final Cut, The (2004)",
+     "children": [{"name": "2.5" }]
+    },
+ {
+     "name": "Robinson Crusoe on Mars (1964)",
+     "children": [{"name": "3" }]
+    },
+ {
+     "name": "Futureworld (1976)",
+     "children": [{"name": "2.5" }]
+    },
+ {
+     "name": "Return, The (2006)",
+     "children": [{"name": "1.5" }]
+    },
+ {
+     "name": "Lathe of Heaven, The (1980)",
+     "children": [{"name": "3.5" }]
+    },
+ {
+     "name": "Dante 01 (2008)",
+     "children": [{"name": "3.5" }]
+    },
+ {
+     "name": "Stargate: Continuum (2008)",
+     "children": [{"name": "3.25" }]
+    },
+ {
+     "name": "Timecrimes(2007)",
+     "children": [{"name": "3.75" }]
+    }] },
+	{ "name": "Romance",    "children": [ {
+     "name": "House of Mirth, The (2000)",
+     "children": [{"name": "3.33" }]
+    },
+ {
+     "name": "Claim, The (2000)",
+     "children": [{"name": "4" }]
+    },
+ {
+     "name": "Cherry 2000 (1987)",
+     "children": [{"name": "2.5" }]
+    },
+ {
+     "name": "Angel Eyes (2001)",
+     "children": [{"name": "2.5" }]
+    },
+ {
+     "name": "Everybody's All-American (1988)",
+     "children": [{"name": "2.5" }]
+    },
+ {
+     "name": "Happy Accidents (2000)",
+     "children": [{"name": "4" }]
+    },
+ {
+     "name": "Enigma (2001)",
+     "children": [{"name": "3.4" }]
+    },
+ {
+     "name": "Brown Sugar (2002)",
+     "children": [{"name": "3" }]
+    },
+ {
+     "name": "Rio Grande (1950)",
+     "children": [{"name": "3.5" }]
+    },
+ {
+     "name": "Grey Fox, The (1982)",
+     "children": [{"name": "2.5" }]
+    }] },
+	{ "name": "Mystery",    "children": [ {
+     "name": "Blow Out (1981)",
+     "children": [{"name": "3.38" }]
+    },
+ {
+     "name": "Still of the Night (1982)",
+     "children": [{"name": "3" }]
+    },
+ {
+     "name": "Andromeda Strain, The (1971)",
+     "children": [{"name": "3.7" }]
+    },
+ {
+     "name": "Shattered (1991)",
+     "children": [{"name": "3.33" }]
+    },
+ {
+     "name": "Knight Moves (1992)",
+     "children": [{"name": "3.5" }]
+    },
+ {
+     "name": "Secret Window (2004)",
+     "children": [{"name": "3.31" }]
+    },
+ {
+     "name": "Body Double (1984)",
+     "children": [{"name": "2.67" }]
+    },
+ {
+     "name": "Maltese Falcon, The (a.k.a. Dangerous Female) (1931)",
+     "children": [{"name": "4.35" }]
+    },
+ {
+     "name": "Agatha Christie's 'Ten Little Indians'  (1965)",
+     "children": [{"name": "3.25" }]
+    },
+ {
+     "name": "Fear X (2003)",
+     "children": [{"name": "3" }]
+    }] },
+	{ "name": "Film-Noir",    "children": [ {
+     "name": "Suture (1993)",
+     "children": [{"name": "3.5" }]
+    },
+ {
+     "name": "Force of Evil (1948)",
+     "children": [{"name": "4" }]
+    },
+ {
+     "name": "Maltese Falcon, The (1941)",
+     "children": [{"name": "4.17" }]
+    },
+ {
+     "name": "Notorious (1946)",
+     "children": [{"name": "4.31" }]
+    },
+ {
+     "name": "Raw Deal (1948)",
+     "children": [{"name": "4" }]
+    },
+ {
+     "name": "T-Men (1947)",
+     "children": [{"name": "4" }]
+    },
+ {
+     "name": "Third Man, The (1949)",
+     "children": [{"name": "4.29" }]
+    },
+ {
+     "name": "Out of the Past (1947)",
+     "children": [{"name": "3.67" }]
+    },
+ {
+     "name": "Suspicion (1941)",
+     "children": [{"name": "3.83" }]
+    },
+ {
+     "name": "Big Combo, The (1955)",
+     "children": [{"name": "3" }]
+    },
+ {
+     "name": "Railroaded! (1947)",
+     "children": [{"name": "3" }]
+    }] },
+	{ "name": "Fantasy",    "children": [ {
+     "name": "Prophecy, The (1995)",
+     "children": [{"name": "3.25" }]
+    },
+ {
+     "name": "Candyman: Farewell to the Flesh (1995)",
+     "children": [{"name": "2.67" }]
+    },
+ {
+     "name": "Brazil (1985)",
+     "children": [{"name": "4.05" }]
+    },
+ {
+     "name": "Dracula (Bram Stoker's Dracula) (1992)",
+     "children": [{"name": "3.17" }]
+    },
+ {
+     "name": "Tales from the Darkside: The name (1990)",
+     "children": [{"name": "3" }]
+    },
+ {
+     "name": "Sleepy Hollow (1999)",
+     "children": [{"name": "3.71" }]
+    },
+ {
+     "name": "Ninth Gate, The (1999)",
+     "children": [{"name": "3.26" }]
+    },
+ {
+     "name": "Evil Dead, The (1981)",
+     "children": [{"name": "3.5" }]
+    },
+ {
+     "name": "Made in Heaven (1987)",
+     "children": [{"name": "2.75" }]
+    },
+ {
+     "name": "Last Wave, The (1977)",
+     "children": [{"name": "3.5" }]
+    },
+ {
+     "name": "Queen of the Damned (2002)",
+     "children": [{"name": "2" }]
+    }] },
+	{ "name": "Drama",    "children": [ {
+     "name": "Vertigo (1958)",
+     "children": [{"name": "4.17" }]
+    },
+ {
+     "name": "Gaslight (1944)",
+     "children": [{"name": "3.9" }]
+    },
+ {
+     "name": "Casablanca (1942)",
+     "children": [{"name": "4.24" }]
+    },
+ {
+     "name": "Gone with the Wind (1939)",
+     "children": [{"name": "3.96" }]
+    },
+ {
+     "name": "Sunset Blvd. (a.k.a. Sunset Boulevard) (1950)",
+     "children": [{"name": "4.22" }]
+    },
+ {
+     "name": "Citizen Kane (1941)",
+     "children": [{"name": "4.4" }]
+    },
+ {
+     "name": "All About Eve (1950)",
+     "children": [{"name": "4.2" }]
+    },
+ {
+     "name": "Rebecca (1940)",
+     "children": [{"name": "4.17" }]
+    },
+ {
+     "name": "Foreign Correspondent (1940)",
+     "children": [{"name": "3.71" }]
+    },
+ {
+     "name": "Affair to Remember, An (1957)",
+     "children": [{"name": "4.07" }]
+    },
+ {
+     "name": "Ghost and Mrs. Muir, The (1947)",
+     "children": [{"name": "3.88" }]
+    }] },
+	{ "name": "Documentary",    "children": [ {
+     "name": "Promises (2001)",
+     "children": [{"name": "2.5" }]
+    },
+ {
+     "name": "Atomic Cafe, The (1982)",
+     "children": [{"name": "3.13" }]
+    },
+ {
+     "name": "Dogtown and Z-Boyz (2001)",
+     "children": [{"name": "3.5" }]
+    },
+ {
+     "name": "Last Waltz, The (1978)",
+     "children": [{"name": "3.58" }]
+    },
+ {
+     "name": "Kid Stays in the Picture, The (2002)",
+     "children": [{"name": "3.25" }]
+    },
+ {
+     "name": "Trials of Henry Kissinger, The (2002)",
+     "children": [{"name": "3" }]
+    },
+ {
+     "name": "Powaqqatsi (1988)",
+     "children": [{"name": "4" }]
+    },
+ {
+     "name": "Bowling for Columbine (2002)",
+     "children": [{"name": "3.75" }]
+    },
+ {
+     "name": "Fidel (2001)",
+     "children": [{"name": "2.5" }]
+    },
+ {
+     "name": "Naqoyqatsi (2002)",
+     "children": [{"name": "4.5" }]
+    },
+ {
+     "name": "Faces of Death 2 (1981)",
+     "children": [{"name": "1.25" }]
+    }] },
+	{ "name": "Crime",    "children": [ {
+     "name": "Jason's Lyric (1994)",
+     "children": [{"name": "4" }]
+    },
+ {
+     "name": "Above the Rim (1994)",
+     "children": [{"name": "3.5" }]
+    },
+ {
+     "name": "Carlito's Way (1993)",
+     "children": [{"name": "3.91" }]
+    },
+ {
+     "name": "Fresh (1994)",
+     "children": [{"name": "4.14" }]
+    },
+ {
+     "name": "Guilty as Sin (1993)",
+     "children": [{"name": "2.5" }]
+    },
+ {
+     "name": "Killing Zoe (1994)",
+     "children": [{"name": "3.5" }]
+    },
+ {
+     "name": "Perfect World, A (1993)",
+     "children": [{"name": "3.97" }]
+    },
+ {
+     "name": "Romeo Is Bleeding (1993)",
+     "children": [{"name": "3.39" }]
+    },
+ {
+     "name": "Trial by Jury (1994)",
+     "children": [{"name": "4" }]
+    },
+ {
+     "name": "True Romance (1993)",
+     "children": [{"name": "4.02" }]
+    },
+ {
+     "name": "Croupier (1998)",
+     "children": [{"name": "3.83" }]
+    }] },
+	{ "name": "Comedy",    "children": [ {
+     "name": "Sabrina (1995)",
+     "children": [{"name": "3.38" }]
+    },
+ {
+     "name": "American President, The (1995)",
+     "children": [{"name": "3.73" }]
+    },
+ {
+     "name": "Dracula: Dead and Loving It (1995)",
+     "children": [{"name": "2.83" }]
+    },
+ {
+     "name": "Four Rooms (1995)",
+     "children": [{"name": "3.64" }]
+    },
+ {
+     "name": "Ace Ventura: When Nature Calls (1995)",
+     "children": [{"name": "2.64" }]
+    },
+ {
+     "name": "Get Shorty (1995)",
+     "children": [{"name": "3.49" }]
+    },
+ {
+     "name": "Clueless (1995)",
+     "children": [{"name": "3.28" }]
+    },
+ {
+     "name": "To Die For (1995)",
+     "children": [{"name": "3.36" }]
+    },
+ {
+     "name": "Mighty Aphrodite (1995)",
+     "children": [{"name": "3.58" }]
+    },
+ {
+     "name": "Postman, The (Postino, Il) (1994)",
+     "children": [{"name": "4.05" }]
+    }] },
+	{ "name": "Children",    "children": [ {
+     "name": "Babe (1995)",
+     "children": [{"name": "3.62" }]
+    },
+ {
+     "name": "Big Green, The (1995)",
+     "children": [{"name": "3" }]
+    },
+ {
+     "name": "White Balloon, The (Badkonake sefid) (1995)",
+     "children": [{"name": "3.33" }]
+    },
+ {
+     "name": "Dunston Checks In (1996)",
+     "children": [{"name": "2.42" }]
+    },
+ {
+     "name": "Kim (1950)",
+     "children": [{"name": "4" }]
+    },
+ {
+     "name": "Harriet the Spy (1996)",
+     "children": [{"name": "3.5" }]
+    },
+ {
+     "name": "Kazaam (1996)",
+     "children": [{"name": "2.64" }]
+    },
+ {
+     "name": "Matilda (1996)",
+     "children": [{"name": "3.22" }]
+    },
+ {
+     "name": "House Arrest (1996)",
+     "children": [{"name": "3.13" }]
+    },
+ {
+     "name": "First Kid (1996)",
+     "children": [{"name": "4.17" }]
+    },
+ {
+     "name": "Love Bug, The (1969)",
+     "children": [{"name": "2.83" }]
+    }] },
+	{ "name": "Animation",    "children": [ {
+     "name": "Free Willy 2: The Adventure Home (1995)",
+     "children": [{"name": "2.44" }]
+    },
+ {
+     "name": "Pocahontas (1995)",
+     "children": [{"name": "3.11" }]
+    },
+ {
+     "name": "Hop (2011)",
+     "children": [{"name": "3.5" }]
+    },
+ {
+     "name": "My Dog Tulip (2009)",
+     "children": [{"name": "2" }]
+    },
+ {
+     "name": "Idiots and Angels (2008)",
+     "children": [{"name": "3" }]
+    },
+ {
+     "name": "Smurfs, The (2011)",
+     "children": [{"name": "2" }]
+    },
+ {
+     "name": "Arthur Christmas (2011)",
+     "children": [{"name": "3" }]
+    },
+ {
+     "name": "Chico & Rita (2010)",
+     "children": [{"name": "2" }]
+    },
+ {
+     "name": "Dr. Seuss' The Lorax (2012)",
+     "children": [{"name": "3.67" }]
+    },
+ {
+     "name": "Presto (2008)",
+     "children": [{"name": "4" }]
+    },
+ {
+     "name": "Cat in the Hat, The (1971)",
+     "children": [{"name": "3.5" }]
+    }] },
+	{ "name": "Adventure",    "children": [ {
+     "name": "Judge Dredd (1995)",
+     "children": [{"name": "2.64" }]
+    },
+ {
+     "name": "Toy Story (1995)",
+     "children": [{"name": "3.91" }]
+    },
+ {
+     "name": "Jumanji (1995)",
+     "children": [{"name": "3.35" }]
+    },
+ {
+     "name": "Tom and Huck (1995)",
+     "children": [{"name": "3.67" }]
+    },
+ {
+     "name": "Balto (1995)",
+     "children": [{"name": "3.44" }]
+    },
+ {
+     "name": "City of Lost Children, The (Cit? des enfants pe...",
+     "children": [{"name": "4.23" }]
+    },
+ {
+     "name": "Wings of Courage (1995)",
+     "children": [{"name": "2.5" }]
+    },
+ {
+     "name": "Lamerica (1994)",
+     "children": [{"name": "3" }]
+    },
+ {
+     "name": "Indian in the Cupboard, The (1995)",
+     "children": [{"name": "3.05" }]
+    },
+ {
+     "name": "Bottle Rocket (1996)",
+     "children": [{"name": "3.75" }]
+    }] },
+	{ "name": "Action",    "children": [ {
+     "name": "Romper Stomper (1992)",
+     "children": [{"name": "3.78" }]
+    },
+ {
+     "name": "Shadow, The (1994)",
+     "children": [{"name": "3.19" }]
+    },
+ {
+     "name": "Blade Runner (1982)",
+     "children": [{"name": "4.17" }]
+    },
+ {
+     "name": "Striking Distance (1993)",
+     "children": [{"name": "3" }]
+    },
+ {
+     "name": "Super Mario Bros. (1993)",
+     "children": [{"name": "1.81" }]
+    },
+ {
+     "name": "Surviving the Game (1994)",
+     "children": [{"name": "2.4" }]
+    },
+ {
+     "name": "Terminal Velocity (1994)",
+     "children": [{"name": "2.85" }]
+    },
+ {
+     "name": "Three Musketeers, The (1993)",
+     "children": [{"name": "3.05" }]
+    },
+ {
+     "name": "Tombstone (1993)",
+     "children": [{"name": "3.64" }]
+    },
+ {
+     "name": "Pagemaster, The (1994)",
+     "children": [{"name": "2.75" }]
+    }] },
+	{ "name": "unknown",    "children": [ {
+     "name": "Li'l Quinquin",
+     "children": [{"name": "2" }]
+    },
+ {
+     "name": "Pablo (2012)",
+     "children": [{"name": "3.5" }]
+    },
+ {
+     "name": "The Big Broadcast of 1936 (1935)",
+     "children": [{"name": "2" }]
+    },
+ {
+     "name": "Round Trip to Heaven (1992)",
+     "children": [{"name": "4" }]
+    },
+ {
+     "name": "The 50 Year Argument (2014)",
+     "children": [{"name": "2.5" }]
+    },
+ {
+     "name": "The Take (2009)",
+     "children": [{"name": "3.5" }]
+    },
+ {
+     "name": "Marco Polo: One Hundred Eyes (2015)",
+     "children": [{"name": "4" }]
+    }] },
+	{ "name": "Musical",    "children": [ {
+     "name": "American in Paris, An (1951)",
+     "children": [{"name": "3.68" }]
+    },
+ {
+     "name": "Meet Me in St. Louis (1944)",
+     "children": [{"name": "3.62" }]
+    },
+ {
+     "name": "Gigi (1958)",
+     "children": [{"name": "3.83" }]
+    },
+ {
+     "name": "Inspector General, The (1949)",
+     "children": [{"name": "4" }]
+    },
+ {
+     "name": "Sound of Music, The (1965)",
+     "children": [{"name": "3.97" }]
+    },
+ {
+     "name": "Madame Butterfly (1995)",
+     "children": [{"name": "4.5" }]
+    },
+ {
+     "name": "Tommy (1975)",
+     "children": [{"name": "3.29" }]
+    },
+ {
+     "name": "South Pacific (1958)",
+     "children": [{"name": "4.13" }]
+    },
+ {
+     "name": "Gypsy (1962)",
+     "children": [{"name": "3.25" }]
+    },
+ {
+     "name": "Unsinkable Molly Brown, The (1964)",
+     "children": [{"name": "2.5" }]
+    }] },
+	{ "name": "Horror",    "children": [ {
+     "name": "Last Exorcism Part II, The (2013)",
+     "children": [{"name": "3.5" }]
+    },
+ {
+     "name": "Evil Dead (2013)",
+     "children": [{"name": "3.75" }]
+    },
+ {
+     "name": "Resolution (2012)",
+     "children": [{"name": "2" }]
+    },
+ {
+     "name": "Afflicted, The (2010)",
+     "children": [{"name": "4.5" }]
+    },
+ {
+     "name": "Dark Circles (2013) ",
+     "children": [{"name": "4" }]
+    },
+ {
+     "name": "Maniac (2012)",
+     "children": [{"name": "3.5" }]
+    },
+ {
+     "name": "American Mary (2012)",
+     "children": [{"name": "4.25" }]
+    },
+ {
+     "name": "V/H/S/2 (2013)",
+     "children": [{"name": "3.75" }]
+    },
+ {
+     "name": "Jug Face (2013)",
+     "children": [{"name": "4" }]
+    },
+ {
+     "name": "Conjuring, The (2013)",
+     "children": [{"name": "4" }]
+    }] }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ ]
+ }
