@@ -10,24 +10,4 @@ A **movie recommender system** given by user data, movie data and social data. T
      
 Data for this project has been made available from GroupLens
 Research in Department of Computer Science and Engineering at the
-University of Minnesota. The data can be found at <https://www.http://grouplens.org/datasets/movielens/>.
-*Thank You GroupLens*
-
-
-
-Description
-===========
-
-A LONGER DESCRIPTION OF YOUR PROJECT GOES HERE...
-The type of recommendation we can add to our recommendation system
-
-- personalized recommendation system
-- based on popular items
-- based on different features(comedy, action, ...). We may separate our each of those
-
-
-Note
-====
-
-This project has been set up using PyScaffold 2.2.1. For details and usage
-information on PyScaffold see http://pyscaffold.readthedocs.org/.
+University of Minnesota. The data can be found at <https://grouplens.org/datasets/movielens/100k>.
